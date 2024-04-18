@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: snow;
+}
+
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.pagina {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.pagina .container {
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    flex-direction: column;
+}
+
+
