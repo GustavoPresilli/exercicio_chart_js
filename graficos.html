@@ -7,6 +7,8 @@
     <title>Exercício Chart.js</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/jpg"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE52BskswQuXnCC1INQpBaXrbliipWobhhM8CYw5ELJw&s">
 </head>
 
 <body>
@@ -26,8 +28,13 @@
 
 </html>
 <script>
-    var temperatura = [22, 24, 27, 23, 20, 18]
-    var umidade = [90, 89, 93, 87, 88, 82]
+    
+    // Gráfico de barra 
+
+    // Dados do gráfico de barra
+
+    var temperaturaBarra = [22, 24, 27, 23, 20, 18]
+    var umidadeBarra = [90, 89, 93, 87, 88, 82]
 
     const barra = document.getElementById('graficoBarra');
 
@@ -37,7 +44,7 @@
         datasets: [
             {
                 label: 'Temperatura Média',
-                data: temperatura,
+                data: temperaturaBarra,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.4)'
                 ],
@@ -48,7 +55,7 @@
             },
             {
                 label: 'Umidade Média',
-                data: umidade,
+                data: umidadeBarra,
                 backgroundColor: [
                     'rgba(137, 207, 240, 0.4)'
                 ],
@@ -71,11 +78,17 @@
         },
     };
 
+    // Criação do gráfico de Barra 
     new Chart(barra, configBarra);
+
+
+    // Grafico de Linha
 
     const linha = document.getElementById('graficoLinha');
 
-
+    // Dados do gráfico de linha 
+    var temperaturaLinha = [22, 24, 27, 23, 20, 55];
+    var umidadeLinha = [90, 89, 83, 87, 88, 82];
 
     const hora = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
     const dadosLinha = {
@@ -83,14 +96,14 @@
         datasets: [
             {
                 label: 'Temperatura',
-                data: [22, 24, 27, 23, 20, 55],
+                data: temperaturaLinha,
                 fill: false,
                 borderColor: 'rgb(255, 99, 132)',
                 tension: 0.1
             },
             {
                 label: 'Umidade',
-                data: [90, 89, 83, 87, 88, 82],
+                data: umidadeLinha,
                 fill: false,
                 borderColor: 'rgb(137, 207, 240)',
                 tension: 0.1
@@ -102,6 +115,8 @@
         data: dadosLinha,
     };
 
-    new Chart(linha, configLinha)
 
+    // Criação do gráfico de Linha 
+
+    new Chart(linha, configLinha)
 </script>
